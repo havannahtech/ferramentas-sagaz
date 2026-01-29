@@ -1,242 +1,239 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sagaz Motors | Futuro Sustentável</title>
-  <meta name="description" content="Central de links da Sagaz Motors – inovação, motos elétricas e sustentabilidade." />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sagaz Motors | Central Premium</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --bg: #000000;
-      --card: #0f0f0f;
-      --primary: #c62828; /* vermelho quase bordô */
-      --secondary: #ff3b30;
-      --text: #ffffff;
-      --muted: #b0b0b0;
-    }
+<style>
+:root{
+  --bg:#040404;
+  --card:#0d0d0d;
+  --primary:#7b1e1e;      /* vermelho quase bordo */
+  --primary-glow:#a83232;
+  --text:#ffffff;
+  --muted:#8a8a8a;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+body{
+  min-height:100vh;
+  background:
+    radial-gradient(circle at top, rgba(123,30,30,0.25), transparent 55%),
+    #040404;
+  color:var(--text);
+}
 
-    body {
-      background: radial-gradient(circle at top, #111 0%, #000 60%);
-      color: var(--text);
-      min-height: 100vh;
-    }
+header{
+  text-align:center;
+  padding:3rem 1rem 2rem;
+}
+header img{
+  max-width:210px;
+  margin-bottom:1.2rem;
+}
+header h1{
+  font-size:1.7rem;
+  font-weight:700;
+  letter-spacing:1px;
+  color:#fff;
+}
+header p{
+  color:var(--muted);
+  font-size:.85rem;
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+main{
+  max-width:1000px;
+  margin:auto;
+  padding:2rem 1rem 3rem;
+}
 
-    header {
-      text-align: center;
-      padding: 3rem 1rem 2rem;
-    }
+.links{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:1.4rem;
+}
 
-    header img {
-      max-width: 220px;
-      width: 100%;
-      margin-bottom: 1.2rem;
-    }
+.card{
+  background:
+    linear-gradient(180deg,#121212,#080808);
+  border:1px solid rgba(123,30,30,.35);
+  border-radius:22px;
+  padding:1.8rem;
+  display:flex;
+  align-items:center;
+  gap:1.2rem;
+  cursor:pointer;
+  transition:.35s ease;
+  text-decoration:none;
+}
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:
+    0 20px 45px rgba(123,30,30,.35);
+  border-color:var(--primary-glow);
+}
 
-    header h1 {
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: var(--primary);
-    }
+.icon{
+  width:54px;
+  height:54px;
+  border-radius:18px;
+  background:
+    radial-gradient(circle at top, #9b2d2d, #5c1414);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:24px;
+}
 
-    header p {
-      margin-top: .5rem;
-      color: var(--muted);
-      font-size: .95rem;
-    }
+.card h3{
+  font-size:1rem;
+  font-weight:600;
+  letter-spacing:.5px;
+  color:#fff;
+}
 
-    main {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
-      display: grid;
-      gap: 2rem;
-    }
+footer{
+  text-align:center;
+  padding:2rem 1rem 3rem;
+  color:#6f6f6f;
+  font-size:.75rem;
+}
 
-    .section-title {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: .5rem;
-      color: var(--primary);
-    }
-
-    .links {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1rem;
-    }
-
-    .card {
-      background: linear-gradient(180deg, #141414, #0a0a0a);
-      border: 1px solid #1e1e1e;
-      border-radius: 14px;
-      padding: 1.2rem;
-      transition: transform .2s ease, box-shadow .2s ease;
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 25px rgba(198,40,40,0.25);
-    }
-
-    .icon {
-      min-width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      background: rgba(198,40,40,0.15);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .icon svg {
-      width: 24px;
-      height: 24px;
-      fill: var(--primary);
-    }
-
-    .card h3 {
-      font-size: .95rem;
-      font-weight: 600;
-      margin-bottom: .3rem;
-    }
-
-    .card p {
-      font-size: .8rem;
-      color: var(--muted);
-      line-height: 1.4;
-    }
-
-    .highlight {
-      background: linear-gradient(135deg, rgba(198,40,40,0.15), rgba(255,255,255,0.02));
-      border: 1px solid rgba(198,40,40,0.4);
-      border-radius: 18px;
-      padding: 1.8rem;
-    }
-
-    .highlight p {
-      font-size: .9rem;
-      color: #e0e0e0;
-      line-height: 1.6;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem 1rem 3rem;
-      color: var(--muted);
-      font-size: .75rem;
-    }
-
-    footer a {
-      color: var(--primary);
-      margin: 0 .4rem;
-    }
-
-    @media (max-width: 480px) {
-      header h1 { font-size: 1.2rem; }
-    }
-  </style>
+/* MODAL */
+#loginModal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.92);
+  z-index:9999;
+  align-items:center;
+  justify-content:center;
+}
+#loginModal .box{
+  background:linear-gradient(180deg,#141414,#0a0a0a);
+  border:1px solid var(--primary);
+  border-radius:22px;
+  padding:30px;
+  width:90%;
+  max-width:360px;
+  text-align:center;
+}
+#loginModal h3{
+  color:#fff;
+  letter-spacing:1px;
+}
+#loginModal input{
+  width:100%;
+  padding:14px;
+  border-radius:14px;
+  border:none;
+  margin:18px 0;
+  background:#080808;
+  color:#fff;
+}
+#loginModal button{
+  width:100%;
+  padding:14px;
+  border-radius:14px;
+  border:none;
+  cursor:pointer;
+  font-weight:600;
+}
+.btn-primary{
+  background:linear-gradient(180deg,#8d2a2a,#5c1414);
+  color:#fff;
+}
+.btn-cancel{
+  margin-top:12px;
+  background:none;
+  color:#777;
+}
+</style>
 </head>
+
 <body>
 
-  <header>
-    <!-- Substitua o src pela logo otimizada (ex: assets/logo.png) -->
-    <img src="logo.png" alt="Sagaz Motors Logo" />
-    <h1>Sagaz Motors</h1>
-    <p>Acelerando o Futuro Sustentável</p>
-  </header>
+<header>
+  <img src="logo.png" alt="Sagaz Motors">
+  <h1>SAGAZ MOTORS</h1>
+  <p>Central Premium de Ferramentas</p>
+</header>
 
-  <main>
+<main>
+  <div class="links">
 
-    <section>
-      <div class="section-title">🔗 Ferramentas Sagaz</div>
-      <div class="links">
+    <a class="card" href="https://havannahtech.github.io/SAGAZLEADS3/" target="_blank">
+      <div class="icon">📈</div>
+      <h3>Sagaz Leads</h3>
+    </a>
 
-        <a href="https://havannahtech.github.io/SAGAZLEADS3/" target="_blank" class="card">
-          <div class="icon">📈</div>
-          <div>
-            <h3>Sagaz Leads</h3>
-            <p>Gestão e captação inteligente de leads para vendas.</p>
-          </div>
-        </a>
+    <a class="card" href="https://havannahtech.github.io/PARCELAMENTO-SAGAZ-MOTORS/" target="_blank">
+      <div class="icon">💳</div>
+      <h3>Simulador de Parcelamento</h3>
+    </a>
 
-        <a href="https://havannahtech.github.io/PARCELAMENTO-SAGAZ-MOTORS/" target="_blank" class="card">
-          <div class="icon">💳</div>
-          <div>
-            <h3>Simulador de Parcelamento</h3>
-            <p>Simule planos de pagamento de forma rápida e clara.</p>
-          </div>
-        </a>
+    <a class="card" href="https://havannahtech.github.io/simulador-moto-eletrica/" target="_blank">
+      <div class="icon">⚡</div>
+      <h3>Simulador Moto Elétrica</h3>
+    </a>
 
-        <a href="https://havannahtech.github.io/simulador-moto-eletrica/" target="_blank" class="card">
-          <div class="icon">⚡</div>
-          <div>
-            <h3>Simulador Moto Elétrica</h3>
-            <p>Compare economia, autonomia e vantagens elétricas.</p>
-          </div>
-        </a>
+    <a class="card" href="#" onclick="abrirBlaster(event)">
+      <div class="icon">📲</div>
+      <h3>WhatsApp Blaster</h3>
+    </a>
 
-        <a href="https://havannahtech.github.io/LEAD-VISITANTE/" target="_blank" class="card">
-          <div class="icon">👤</div>
-          <div>
-            <h3>Lead Visitante</h3>
-            <p>Captura rápida de interesse de novos visitantes.</p>
-          </div>
-        </a>
+    <a class="card" href="https://wa.me/c/5521972871998" target="_blank">
+      <div class="icon">🛒</div>
+      <h3>Catálogo WhatsApp</h3>
+    </a>
 
-        <a href="https://havannahtech.github.io/sagaz_whatsapp_blaster/" target="_blank" class="card">
-          <div class="icon">📲</div>
-          <div>
-            <h3>WhatsApp Blaster</h3>
-            <p>Comunicação em escala com eficiência Sagaz.</p>
-          </div>
-        </a>
+  </div>
+</main>
 
-        <a href="https://wa.me/c/5521972871998" target="_blank" class="card">
-          <div class="icon">🛒</div>
-          <div>
-            <h3>Catálogo WhatsApp</h3>
-            <p>Veja modelos, preços e novidades da Sagaz Motors.</p>
-          </div>
-        </a>
+<footer>
+  © <span id="year"></span> Sagaz Motors · Premium Internal System
+</footer>
 
-      </div>
-    </section>
+<div id="loginModal">
+  <div class="box">
+    <h3>Área Restrita</h3>
+    <input type="password" id="senhaBlaster" placeholder="Senha de acesso">
+    <button class="btn-primary" onclick="validarSenha()">Entrar</button>
+    <button class="btn-cancel" onclick="fecharLogin()">Cancelar</button>
+  </div>
+</div>
 
+<script>
+const SENHA_CORRETA="sagaz123";
+const SESSION_KEY="sagazBlasterAuth";
 
-
-
-  </main>
-
-  <footer>
-    © <span id="year"></span> Sagaz Motors · Todos os direitos reservados<br/>
-    <a href="https://wa.me/5521972871998" target="_blank">WhatsApp</a>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+function abrirBlaster(e){
+  e.preventDefault();
+  if(sessionStorage.getItem(SESSION_KEY)==="true"){
+    window.open("https://havannahtech.github.io/sagaz_whatsapp_blaster/","_blank");
+  } else {
+    document.getElementById("loginModal").style.display="flex";
+  }
+}
+function validarSenha(){
+  if(document.getElementById("senhaBlaster").value===SENHA_CORRETA){
+    sessionStorage.setItem(SESSION_KEY,"true");
+    fecharLogin();
+    window.open("https://havannahtech.github.io/sagaz_whatsapp_blaster/","_blank");
+  } else alert("Senha incorreta");
+}
+function fecharLogin(){
+  document.getElementById("loginModal").style.display="none";
+  document.getElementById("senhaBlaster").value="";
+}
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
 
 </body>
 </html>
